@@ -1,9 +1,11 @@
 # Predicting-Stock-Movement-with-Random-Forest
 This is one of the project I did as a part of my Internship at NeuralTechSoft Pvt. Ltd. Here, I created a stock direction prediction model which predicts whether next day stock market will be Bearish or Bullish.
 
+## Introduction
+
 Predicting trends in stock market prices has been an area of interest for researchers for many years due to its complex and dynamic nature. It is a very challenging task due to the many uncertainties involved and many variables that influence the market value in a particular day such as economic conditions, investors’ sentiments towards a particular company, political events etc. Because of this, stock markets are susceptible to quick changes, causing random fluctuations in the stock price. Stock market series are generally dynamic, non-parametric, chaotic and noisy in nature and hence, stock market price movement is considered to be a random process with fluctuations which are more pronounced for short time windows. Market risk, strongly correlated with forecasting errors, needs to be minimized to ensure minimal risk in investment. Thus, I tried to minimize forecasting error by treating the forecasting problem as a classification problem, a popular suite of algorithms in Machine learning.
 
-## Data and pre-processing
+## Data and Pre-processing
 I was provided with the daily stock data of 2 years for companies like JP Morgan, IBM, Home Depot, ARWR and Costo Wholesale Corporation. There were 2520 rows with  Company symbol, datetime, close, high, low and volume columns.
 
 I did some pre-processing on data. Since there were multiple ticker symbols, I sorted my data first by Symbol column and then by date time column. After sorting the data, I calculated the change in price from one period to next. Once, I calculated the change in price, I checked for the ticker symbols. Technically, each row where the ticker symbol changes are incorrect because it's using the price from a different ticker. That means we need to have the first row of each ticker symbol to be null for the change in price column. for doing this, I first called the symbol column then I did a comparison using shift method and changed those columns to null. Since there were five companies there were 5 null symbols out of total.

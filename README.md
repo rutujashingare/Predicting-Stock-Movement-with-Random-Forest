@@ -49,12 +49,12 @@ Finally, I calculated my last indicator that is Williams percent range same way 
 
 ## Model Building
 
-After calculating the indicators, I created the prediction column. The close column included the prices I needed to determine if the stock is closed up or down for any given day. So, I selected the close column and grouped my data by each symbol. I used lambda function and compared the current prices with the previous prices. So, in this way I created the output column which resulted as '1' if today’s closing price is greater than yesterday’s closing price then '-1' for down days and '0' for no change. 
+After calculating the indicators, I created the prediction column. The close column included the prices I needed to determine if the stock is closed up or down for any given day. So, I selected the close column and grouped my data by each symbol. I used lambda function and compared the current prices with the previous prices. So, in this way I created the output column which resulted as '1' if today’s closing price is greater than yesterday’s closing price i.e. for up days, '-1' for down days and '0' for no change. 
 
 ![image](https://user-images.githubusercontent.com/70087327/132369559-4edb7588-b115-4ccc-b08e-817db15f7230.png)
 
 
-## Train test split
+## Train Test split
 
 I splitted data into train and test set in ratio of 80:20. For that the indicator columns served as x and prediction column served as y. After splitting the data I created Random forest classifier model and fitted the training data to model using fit method. Finally with the trained model we can make predictions.
 

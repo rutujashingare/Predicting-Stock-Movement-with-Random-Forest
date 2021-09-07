@@ -1,5 +1,5 @@
 # Predicting-Stock-Movement-with-Random-Forest
-This is one of the project I did as a part of my Internship at Neuraltechsoft Pvt. Ltd. Here, I was asked to a stock direction prediction model which predicts whether next day stock market will be Bearish or Bullish.
+This is one of the project I did as a part of my Internship at Neuraltechsoft Pvt. Ltd. Here, I was asked to create a stock direction prediction model which predicts whether next day stock market will be Bearish or Bullish.
 
 ## Introduction
 

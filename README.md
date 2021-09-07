@@ -16,9 +16,11 @@ The first indicator was RSI. I grouped the columns by symbols and performed tran
 ![image](https://user-images.githubusercontent.com/70087327/132368817-15b51049-0f51-4c29-ae94-8dd3f59bee69.png)
 
 
+
 Next I calculated the stochastic oscillators by applying rolling function on change in price column. Here I compared the most recent closing price to the highest and lowest prices for 14 days respectively.
 
 ![image](https://user-images.githubusercontent.com/70087327/132368855-57fa21fc-8e43-43d5-ad08-8080799f5aa5.png)
+
 
 
 After that I calculated the moving average convergence divergence by subtracting the 26-period exponential moving average (EMA) from the 12-period EMA. After the calculations, I found that when MACD was below the signal line it indicated sell signal and above indicated the buy signal. 
@@ -26,14 +28,17 @@ After that I calculated the moving average convergence divergence by subtracting
 ![image](https://user-images.githubusercontent.com/70087327/132368951-fc7f483c-36d6-4998-9946-320c6d40f9ec.png)
 
 
+
 Next, I calculated price rate of change by measuring the most recent change in price with respect to price in 9 days. 
 
 ![image](https://user-images.githubusercontent.com/70087327/132368992-761b3f69-c60f-4e4a-8d67-b76b8bd10dc6.png)
 
 
+
 Later on I calculated the on balance volume by calculating the difference for the closing price and used a for loop for looping through each row in the volume column. If the change in price was greater than 0 then I added the volume, and if it was less than 0 then I subtracted the volume.
 
 ![image](https://user-images.githubusercontent.com/70087327/132369029-daf9be54-8cc0-45d3-bf17-c4dd70c8c47e.png)
+
 
 Finally, I calculated my last indicator that is Williams percent range same way I calculated the stochastic oscillator. It ranges from -100 to 0. When the value was above -20 it indicated a sell signal and when it was below -80, it indicated a buy signal.
 
@@ -49,7 +54,7 @@ After calculating the indicators, I created the prediction column. The close col
 
 ## Train test split
 
- split my data into train and test set in 80:20. For that my indicator columns served as x and prediction column served as y. After splitting the data I created my Random forest classifier model and fitted the training data to model using fit method. Finally with the trained model we can make predictions.
+I splitted data into train and test set in ratio of 80:20. For that the indicator columns served as x and prediction column served as y. After splitting the data I created Random forest classifier model and fitted the training data to model using fit method. Finally with the trained model we can make predictions.
 
 ## Accuracy and classification report
 

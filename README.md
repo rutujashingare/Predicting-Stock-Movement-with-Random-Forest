@@ -93,5 +93,4 @@ Then I calculated the ROC Curve which shows us the performance of our model at a
 ![image](https://user-images.githubusercontent.com/70087327/132370310-fc846711-bc7b-4cc8-9044-853452d37d83.png)
 
 ## Conclusion
-
-Created a stocks direction prediction model which will predict whether next day stock market  will be bearish or bullish.
+This model can accurately predicts whether next day stock market will be bearish or bullish with the accuracy of 74%.
